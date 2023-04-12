@@ -34,7 +34,8 @@ jobs:
       # See https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference
       run: msbuild /m /p:Configuration=${{env.BUILD_CONFIGURATION}} ${{env.SOLUTION_FILE_PATH}}
 
-lint:
+      
+  lint:
     
     runs-on: windows-latest
     
@@ -43,7 +44,8 @@ lint:
       working-directory: ${{env.GITHUB_WORKSPACE}}
       run: echo LINT
 
-test:
+
+  test:
     needs: [build, lint]
     runs-on: windows-latest
     
