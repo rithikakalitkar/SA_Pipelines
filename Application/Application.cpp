@@ -7,6 +7,7 @@
 
 CoolClass::CoolClass(void)
 {
+    int i =0; // To create a PR.
 }
 
 int CoolClass::Calc(int a, int b)
